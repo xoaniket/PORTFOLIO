@@ -1,15 +1,9 @@
-import {
-  forwardRef,
-  useEffect,
-  useImperativeHandle,
-  useRef,
-  useState,
-} from "react";
+import { useEffect, useRef, useState } from "react";
 
 import { commands } from "./commands";
 import { downloadResume } from "../../utlis/downResume";
 
-const Terminal = forwardRef(function Terminal({ sectionScroll }, ref) {
+function Terminal() {
   const [input, setInput] = useState("");
   const [history, setHistory] = useState([]);
   const [commandHistory, setCommandHistory] = useState([]);
@@ -136,16 +130,10 @@ const Terminal = forwardRef(function Terminal({ sectionScroll }, ref) {
     //Print output..................
     await printOutput(commands[cmd]);
 
-    // Wait before scrolling
-    await delay(500);
-
     //download resume or scroll to section...........
     if (cmd === "resume") {
       downloadResume();
-    } else {
-      sectionScroll(cmd);
     }
-
     //save history...................................
     setCommandHistory((prev) => [...prev, command]);
     setHistoryIndex(-1);
@@ -179,9 +167,6 @@ const Terminal = forwardRef(function Terminal({ sectionScroll }, ref) {
   };
 
   //lets the child decide which methods or values the parent can access.......................................
-  useImperativeHandle(ref, () => ({
-    executeCommand,
-  }));
 
   //history scroll on every history updation........................................
   useEffect(() => {
@@ -233,6 +218,6 @@ const Terminal = forwardRef(function Terminal({ sectionScroll }, ref) {
       </div>
     </div>
   );
-});
+}
 
 export default Terminal;

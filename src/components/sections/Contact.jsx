@@ -23,7 +23,7 @@ export default function Contact() {
   ];
 
   return (
-    <section className="rounded-xl border border-cyan-500/20 bg-slate-900/60 backdrop-blur-sm p-10">
+    <section className="rounded-xl border border-cyan-500/20 bg-slate-900/60 backdrop-blur-sm p-5 lg:p-10">
       <header className="flex mb-6 items-center justify-between border-b border-cyan-500/20 pb-5">
         <h1 className="orbitron text-3xl text-cyan-400">CONTACT</h1>
 

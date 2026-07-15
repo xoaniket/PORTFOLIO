@@ -1,7 +1,6 @@
-import { forwardRef } from "react";
 import Terminal from "../terminal/Terminal"; //lets a parent access a child through a ref
 
-const Panel = forwardRef(function Panel({ sectionScroll }, ref) {
+function Panel() {
   return (
     <div className="flex flex-col h-100   bg-slate-950 border border-cyan-500/20 rounded-xl  shadow-2xl">
       <header className="flex py-4 pl-5 gap-16 border-b border-cyan-500/20  items-center">
@@ -15,11 +14,11 @@ const Panel = forwardRef(function Panel({ sectionScroll }, ref) {
         </h1>
       </header>
       <div className="px-6 flex-1 overflow-hidden ">
-        <Terminal sectionScroll={sectionScroll} ref={ref} />
+        <Terminal />
       </div>
       a
     </div>
   );
-});
+}
 
 export default Panel;

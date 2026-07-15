@@ -34,7 +34,7 @@ export default function Skills() {
     },
   ];
   return (
-    <section className="rounded-xl border border-cyan-500/20 bg-slate-900/60 backdrop-blur-sm  p-10">
+    <section className="rounded-xl border border-cyan-500/20 bg-slate-900/60 backdrop-blur-sm p-5 lg:p-10">
       <header className="flex mb-6 items-center justify-between border-b border-cyan-500/20 pb-5">
         <h1 className="orbitron text-3xl text-cyan-400">SKILLS</h1>
 
@@ -51,17 +51,17 @@ export default function Skills() {
         {skills.map((item) => (
           <div
             key={item.category}
-            className="rounded-xl border border-cyan-500/20 bg-slate-950/60 p-6 flex flex-col"
+            className="rounded-lg border border-cyan-500/20 bg-slate-950/60 p-6 flex flex-col"
           >
             <h2 className="orbitron mb-5 text-lg font-semibold text-cyan-400">
               {item.category}
             </h2>
 
-            <div className="flex flex-wrap gap-3 mt-auto">
+            <div className="grid grid-cols-3 gap-3 mt-auto">
               {item.technologies.map((tech) => (
                 <span
                   key={tech}
-                  className="rounded-full border border-cyan-500/20 px-4 py-2 text-sm text-cyan-300 hover:bg-cyan-500/20 transition-all duration-300 hover:translate-y-1 hover:shadow-lg hover:shadow-cyan-500/20"
+                  className="rounded-lg border border-cyan-500/20 px-4 py-2 text-sm text-cyan-300 hover:bg-cyan-500/20 transition-all duration-300 hover:translate-y-1 hover:shadow-lg hover:shadow-cyan-500/20"
                 >
                   {tech}
                 </span>
