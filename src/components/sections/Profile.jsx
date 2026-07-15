@@ -6,7 +6,7 @@ import {
 } from "react-icons/bs";
 import { FiCpu } from "react-icons/fi";
 
-import Corners from "../layout/corners";
+import Corners from "../reusable/corners";
 import {
   FaBootstrap,
   FaFolderOpen,

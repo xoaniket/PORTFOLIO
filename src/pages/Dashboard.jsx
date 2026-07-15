@@ -1,9 +1,9 @@
-import Header from "../components/layout/Header";
-import Hero from "../components/layout/Hero";
+import Header from "../components/reusable/Header";
+import Hero from "../components/reusable/Hero";
 
-import Panel from "../components/layout/Panel";
+import Panel from "../components/reusable/Panel";
 import Profile from "../components/sections/Profile";
-import Projects from "../components/sections/Projects";
+import Projects from "../components/Projects/Projects";
 import Skills from "../components/sections/Skills";
 import Contact from "../components/sections/Contact";
 
