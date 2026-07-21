@@ -41,7 +41,7 @@ export default function Projects() {
                 tiltMaxAngleY={8}
                 perspective={1500}
                 transitionSpeed={1000}
-                glareEnable={false}
+                glareEnable={true}
                 glareMaxOpacity={0.2}
                 glareColor="#22d3ee"
                 glarePosition="all"
@@ -84,7 +84,7 @@ export default function Projects() {
                     {stack.map((tech) => (
                       <span
                         key={tech}
-                        className="flex justify-center  text-cyan-400 rounded-lg w-full border   py-2 border-cyan-500/40 transition-all duration-300 hover:-translate-y-1
+                        className="cursor-target flex justify-center  text-cyan-400 rounded-lg w-full border   py-2 border-cyan-500/40 transition-all duration-300 hover:-translate-y-1
                           hover:shadow-lg hover:shadow-cyan-500/20"
                       >
                         {tech}
@@ -93,9 +93,9 @@ export default function Projects() {
                   </div>
 
                   {/* live links............................................ */}
-                  <div className="mt-6 flex gap-4">
+                  <div className=" mt-6 flex gap-4">
                     <a
-                      className="flex gap-2 rounded-md border border-emerald-500/30 px-3 py-1.5 text-sm text-emerald-400 hover:bg-emerald-500/10"
+                      className="cursor-target flex gap-2 rounded-md border border-emerald-500/30 px-3 py-1.5 text-sm text-emerald-400 hover:bg-emerald-500/10"
                       href={live}
                       target="blank"
                       rel="noopener noreferrer"
@@ -108,7 +108,7 @@ export default function Projects() {
                       href={github}
                       target="blank"
                       rel="noopener noreferrer"
-                      className="rounded-md flex gap-2 border border-cyan-500/30 px-3 py-1.5 text-sm text-cyan-400 hover:bg-cyan-500/10"
+                      className="cursor-target rounded-md flex gap-2 border border-cyan-500/30 px-3 py-1.5 text-sm text-cyan-400 hover:bg-cyan-500/10"
                     >
                       <FaGithubSquare className="text-2xl" />
                       GitHub ↗

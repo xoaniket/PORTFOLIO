@@ -136,7 +136,7 @@ function Profile() {
               return (
                 <span
                   key={label}
-                  className="flex justify-center items-center w-full gap-1 text-cyan-300  rounded-md border border-cyan-500/60 hover:border-cyan-400 bg-slate-950  py-3 pc-3 text-sm
+                  className="cursor-target flex justify-center items-center w-full gap-1 text-cyan-300  rounded-md border border-cyan-500/60 hover:border-cyan-400 bg-slate-950  py-3 pc-3 text-sm
                  transition-all duration-300 hover:translate-y-1 hover:scale-105 hover:bg-cyan-500/20 hover:shadow-lg hover:shadow-cyan-500/20 font-medium
                  "
                 >
@@ -193,7 +193,7 @@ function Profile() {
           {highlights.map(({ title, value, icon: Icon }) => (
             <div
               key={title}
-              className="flex flex-col items-center rounded-lg border border-cyan-500/20 bg-slate-900/60 p-5 transition-all duration-300 hover:-translate-y-1 hover:border-cyan-400 hover:shadow-lg hover:shadow-cyan-500/20"
+              className="cursor-target flex flex-col items-center rounded-lg border border-cyan-500/20 bg-slate-900/60 p-5 transition-all duration-300 hover:-translate-y-1 hover:border-cyan-400 hover:shadow-lg hover:shadow-cyan-500/20"
             >
               <Icon className="text-3xl text-cyan-400 mb-3" />
 
