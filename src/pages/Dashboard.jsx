@@ -1,6 +1,5 @@
 import Header from "../components/common/Header";
 
-import Panel from "../components/common/Panel";
 import Profile from "../sections/Profile";
 import Projects from "../sections/Projects";
 import Skills from "../sections/Skills";
