@@ -2,6 +2,7 @@ import { IoIosGlobe } from "react-icons/io";
 import Tilt from "react-parallax-tilt";
 import { FaGithubSquare } from "react-icons/fa";
 import projects from "../Data/projectsData";
+import { FaFolderPlus } from "react-icons/fa6";
 
 export default function Projects() {
   return (
@@ -110,6 +111,18 @@ export default function Projects() {
             );
           },
         )}
+        <div className="flex flex-col lg:col-span-2 items-center justify-center gap-3 py-16 text-center">
+          <FaFolderPlus className="text-5xl text-cyan-400" />
+
+          <h2 className="orbitron text-2xl text-white">
+            More Projects Coming Soon
+          </h2>
+
+          <p className="max-w-md text-slate-400">
+            I'm continuously building new applications and exploring modern
+            technologies. Check back soon for future updates.
+          </p>
+        </div>
       </div>
     </section>
   );

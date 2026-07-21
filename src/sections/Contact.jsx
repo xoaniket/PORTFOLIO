@@ -1,10 +1,10 @@
-import { useState } from "react";
+import { forwardRef, useState } from "react";
 
 import emailjs from "@emailjs/browser";
 import { FiSend } from "react-icons/fi";
 import contacts from "../Data/contact";
 
-export default function Contact() {
+const Contact = forwardRef((props, ref) => {
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState("");
@@ -74,6 +74,7 @@ export default function Contact() {
         <div className="space-y-6 rounded-2xl border border-cyan-500/20 bg-slate-900/60 p-8 backdrop-blur-md shadow-2xl shadow-slate-950">
           {contacts.map(({ title, href, value, icon: Icon }) => (
             <div
+              key={title}
               className="flex items-center gap-4 rounded-xl border border-cyan-500/20 bg-slate-900/60 p-4
              hover:border-cyan-400 hover:-translate-y-1 hover:shadow-lg hover:shadow-cyan-500/10 transition-all duration-300"
             >
@@ -99,7 +100,10 @@ export default function Contact() {
         {/* FORM SO ANYONE CAN CONTACT ME........................................................................... */}
 
         <div>
-          <div className="rounded-2xl border border-cyan-500/20 bg-slate-900/60 p-8 backdrop-blur-md shadow-2xl shadow-slate-950">
+          <div
+            ref={ref}
+            className="rounded-2xl border border-cyan-500/20 bg-slate-900/60 p-8 backdrop-blur-md shadow-2xl shadow-slate-950"
+          >
             <h2 className="orbitron text-2xl text-cyan-400">Send a Message</h2>
 
             <p className="mt-2 mb-8 text-slate-400">
@@ -214,4 +218,6 @@ export default function Contact() {
       </div>
     </section>
   );
-}
+});
+
+export default Contact;

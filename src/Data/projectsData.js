@@ -58,6 +58,8 @@ const projects = [
       screenshot: Job,
       icon: FaSuitcase,
     },
+
+    
   ];
 
   export default projects;

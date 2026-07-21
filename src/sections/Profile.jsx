@@ -1,15 +1,16 @@
 import Corners from "../components/common/corners";
 import { profileData, myStack, highlights } from "../Data/profile.js";
-import { FiCpu } from "react-icons/fi";
+import { FiCpu, FiSend } from "react-icons/fi";
+import { downloadResume } from "../utlis/downResume.js";
 
-function Profile() {
+function Profile({ contactRef }) {
   return (
     <section className=" backdrop-blur-sm shadow-2xl py-6 px-8 bg-slate-900/60">
-      <div className="grid lg:grid-cols-3 gap-6 mt-6">
+      <div className="mt-6 grid gap-6 lg:grid-cols-2 items-stretch">
         {/* PROFILE ................................................................................. */}
         <div
           className="
-         lg:col-span-2 h-full relative px-5 py-2  items-center  
+          h-full relative px-5 py-2  items-center  
         border border-cyan-500/20 bg-slate-900/60 shadow-2xl shadow-slate-950
         transition-all duration-300 hover:border-cyan-400/50"
         >
@@ -46,6 +47,28 @@ function Profile() {
                 </p>
               </div>
             ))}
+            <div className=" flex gap-10 ">
+              <button
+                onClick={() =>
+                  contactRef.current?.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start",
+                  })
+                }
+                className="group mt-6 flex items-center justify-center gap-2 rounded-xl border border-cyan-500 bg-cyan-500/10 px-6 py-3 font-semibold text-cyan-400
+             transition-all duration-300 hover:bg-cyan-500 hover:text-slate-900"
+              >
+                <FiSend className="transition group-hover:translate-x-1" />
+                Contact Me
+              </button>
+
+              <button
+                onClick={downloadResume}
+                className=" mt-6 rounded-xl border border-cyan-500 px-6 py-3 font-semibold text-cyan-400  transition-all duration-300 hover:bg-cyan-500 hover:text-slate-900"
+              >
+                Download Resume
+              </button>
+            </div>
           </div>
         </div>
 
