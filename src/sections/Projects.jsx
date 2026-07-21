@@ -1,25 +1,16 @@
 import { IoIosGlobe } from "react-icons/io";
 import Tilt from "react-parallax-tilt";
 import { FaGithubSquare } from "react-icons/fa";
-import projects from "./projectsData";
+import projects from "../Data/projectsData";
 
 export default function Projects() {
   return (
-    <section className="rounded-xl border border-cyan-500/20 bg-slate-900/60 backdrop-blur-sm p-5  lg:p-10">
-      <header className="flex mb-6 -center justify-between border-b border-cyan-500/20 pb-5">
-        <h1 className="orbitron text-3xl text-cyan-400">PROJECTS</h1>
-
-        <div className="flex -center gap-2 rounded-full border border-emerald-500/30 bg-emerald-500/10 px-4 py-2">
-          <span className="h-2 w-2 rounded-full bg-emerald-400 animate-pulse"></span>
-
-          <span className="text-xs font-semibold uppercase tracking-widest text-emerald-400">
-            ONLINE
-          </span>
-        </div>
-      </header>
-
+    <section className=" bg-slate-900/60 backdrop-blur-sm p-5  lg:p-10">
+      <h2 className="orbitron text-center lg:text-left lg:ml-6 mb-4 text-4xl text-cyan-400">
+        PROJECTS
+      </h2>
       <div
-        className="  grid md:grid-cols-3 gap-6 bg-slate-950/50
+        className="  grid md:grid-cols-3 gap-6 
        transition-all duration-300 "
       >
         {projects.map(
@@ -36,7 +27,7 @@ export default function Projects() {
             return (
               <Tilt
                 key={id}
-                className="rounded-xl overflow-hidden"
+                className="rounded-xl overflow-hidden shadow-2xl shadow-slate-950"
                 tiltMaxAngleX={8}
                 tiltMaxAngleY={8}
                 perspective={1500}
@@ -48,7 +39,7 @@ export default function Projects() {
                 scale={1.01}
               >
                 <div
-                  className="  group rounded-xl text-white border border-cyan-500/40 p-6 
+                  className="  group rounded-xl  text-white border border-cyan-500/20 bg-slate-900/60 p-6 
                 transition-all duration-150   hover:border-cyan-400 hover:shadow-[0_0_30px_rgba(34,211,238,0.25)]"
                 >
                   <div className="aspect-video lg:h-40 lg:w-full overflow-hidden rounded-lg">

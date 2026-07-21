@@ -1,21 +1,18 @@
-import Header from "../components/reusable/Header";
-import Hero from "../components/reusable/Hero";
+import Header from "../components/common/Header";
 
-import Panel from "../components/reusable/Panel";
-import Profile from "../components/sections/Profile";
-import Projects from "../components/Projects/Projects";
-import Skills from "../components/sections/Skills";
-import Contact from "../components/sections/Contact";
+import Panel from "../components/common/Panel";
+import Profile from "../sections/Profile";
+import Projects from "../sections/Projects";
+import Skills from "../sections/Skills";
+import Contact from "../sections/Contact";
 
 function Dasboard() {
   return (
-    <div className="min-h-screen bg-gray-950 ">
+    <div className="min-h-screen bg-slate-900 ">
       <Header />
 
-      <main className="py">
-        <Hero />
-
-        <section className="mt-8 flex flex-col gap-2">
+      <main>
+        <section className="space-y-20 ">
           <div>
             <Profile />
           </div>

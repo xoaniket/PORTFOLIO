@@ -8,54 +8,8 @@ body {
   font-family: "Orbitron", sans-serif;
 }
 
-@keyframes blink {
-  50% {
-    opacity: 0;
-  }
-}
 
-.cursor {
-  animation: blink 1s steps(1) infinite;
-}
 
-@keyframes scan {
-  0% {
-    transform: translateY(0);
-    opacity: 0;
-  }
 
-  10% {
-    opacity: 1;
-  }
 
-  90% {
-    opacity: 1;
-  }
-
-  100% {
-    transform: translateY(440px);
-    opacity: 0;
-  }
-}
-
-.animate-scan {
-  animation: scan 3s linear infinite;
-}
-
-@keyframes hudGlow {
-  0%,
-  100% {
-    opacity: 0.35;
-    filter: drop-shadow(0 0 0px #22d3ee);
-  }
-
-  50% {
-    opacity: 1;
-    filter: drop-shadow(0 0 10px #22d3ee);
-  }
-}
-
-.hud-corner {
-  animation: hudGlow 2s ease-in-out infinite;
-}
 

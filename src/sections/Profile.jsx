@@ -1,89 +1,16 @@
-import {
-  BsBriefcase,
-  BsCheckCircle,
-  BsCodeSlash,
-  BsPerson,
-} from "react-icons/bs";
+import Corners from "../components/common/corners";
+import { profileData, myStack, highlights } from "../Data/profile.js";
 import { FiCpu } from "react-icons/fi";
 
-import Corners from "../reusable/corners";
-import {
-  FaBootstrap,
-  FaFolderOpen,
-  FaGithub,
-  FaPython,
-  FaReact,
-} from "react-icons/fa6";
-import { SiDjango } from "react-icons/si";
-import { DiJavascript1 } from "react-icons/di";
-import { RiTailwindCssFill } from "react-icons/ri";
-import { GrMysql } from "react-icons/gr";
-import { IoIosSettings } from "react-icons/io";
-import { TbLockBolt } from "react-icons/tb";
-import { IoRocket } from "react-icons/io5";
-
 function Profile() {
-  const profileData = [
-    {
-      icon: BsPerson,
-      label: "Name",
-      value: "Aniket Chauhan",
-    },
-    {
-      icon: BsBriefcase,
-      label: "Education",
-      value: "BCA Graduate",
-    },
-    {
-      icon: BsCheckCircle,
-      label: "Status",
-      value: "Open to work",
-      className: "text-emerald-500",
-    },
-    {
-      icon: BsCodeSlash,
-      label: "Focus",
-      value: "React • Django • REST APIs",
-    },
-  ];
-
-  const myStack = [
-    { icon: FaReact, label: "React" },
-    { icon: SiDjango, label: "Django" },
-    { icon: FaPython, label: "Python", className: "text-amber-400" },
-    { icon: DiJavascript1, label: "JavaScript" },
-    { icon: RiTailwindCssFill, label: "Tailwind CSS" },
-    { icon: FaBootstrap, label: "BootStrap", className: "text-violet-400" },
-    { icon: GrMysql, label: "Mysql" },
-    { icon: FaGithub, label: "Git & GitHub" },
-  ];
-
-  const highlights = [
-    { title: "Projects", value: "8+", icon: FaFolderOpen },
-    { title: "Technologies", value: "10+", icon: IoIosSettings },
-    { title: "REST APIs", value: "JWT Auth", icon: TbLockBolt },
-    { title: "Deployment", value: "Vercel + Render", icon: IoRocket },
-  ];
   return (
-    <section className="rounded-xl border border-cyan-500/20 backdrop-blur-sm shadow-2xl py-6 px-8 bg-slate-900/60">
-      <header className="flex mb-6 items-center justify-between border-b border-cyan-500/20 pb-5">
-        <h1 className="orbitron text-3xl text-cyan-400">DEVELOPER PROFILE</h1>
-
-        <div className="flex items-center gap-2 rounded-full border border-emerald-500/30 bg-emerald-500/10 px-4 py-2">
-          <span className="h-2 w-2 rounded-full bg-emerald-400 "></span>
-
-          <span className="text-xs font-semibold uppercase tracking-widest text-emerald-400">
-            ONLINE
-          </span>
-        </div>
-      </header>
-
+    <section className=" backdrop-blur-sm shadow-2xl py-6 px-8 bg-slate-900/60">
       <div className="grid lg:grid-cols-3 gap-6 mt-6">
         {/* PROFILE ................................................................................. */}
         <div
           className="
          lg:col-span-2 h-full relative px-5 py-2  items-center  
-        border border-cyan-500/20 bg-slate-950/50
+        border border-cyan-500/20 bg-slate-900/60 shadow-2xl shadow-slate-950
         transition-all duration-300 hover:border-cyan-400/50"
         >
           {/* PULSE CORNERS.......................... */}
@@ -123,7 +50,7 @@ function Profile() {
         </div>
 
         {/* CORE TECHNOLOGIES........................................................................................ */}
-        <div className="relative h-full    rounded-xl border border-cyan-500/20 bg-slate-950/40 p-6">
+        <div className="relative h-full    rounded-xl border border-cyan-500/20 bg-slate-900/60 p-6 shadow-2xl shadow-slate-950">
           <Corners />
 
           <h4 className="flex items-center text-2xl uppercase gap-4 mb-4 orbitron text-cyan-400 tracking-tighter ">
@@ -136,8 +63,8 @@ function Profile() {
               return (
                 <span
                   key={label}
-                  className="cursor-target flex justify-center items-center w-full gap-1 text-cyan-300  rounded-md border border-cyan-500/60 hover:border-cyan-400 bg-slate-950  py-3 pc-3 text-sm
-                 transition-all duration-300 hover:translate-y-1 hover:scale-105 hover:bg-cyan-500/20 hover:shadow-lg hover:shadow-cyan-500/20 font-medium
+                  className="flex justify-center items-center w-full gap-1 text-cyan-300  rounded-md border border-cyan-500/60 hover:border-cyan-400   py-3 pc-3 text-sm
+                 transition-all duration-300 hover:translate-y-1 hover:scale-105 hover:bg-cyan-500/20 hover:shadow-lg hover:shadow-cyan-500/20 font-medium 
                  "
                 >
                   <Icon
@@ -152,7 +79,7 @@ function Profile() {
       </div>
 
       {/* PROFESSIONAL SUMMARY.................................................................................. */}
-      <div className="relative mt-6  rounded-xl border border-cyan-500/20 bg-slate-950/40 p-6 max-w-">
+      <div className="relative mt-6  rounded-xl shadow-2xl shadow-slate-950 border border-cyan-500/20 bg-slate-900/60 p-6 max-w-">
         <Corners />
 
         <div className="flex gap-4 mt-8">
@@ -182,7 +109,7 @@ function Profile() {
       </div>
 
       {/* DEVELOPER HIGHLIGHTS................................................................ */}
-      <div className="relative mt-6 rounded-xl border border-cyan-500/20 bg-slate-950/40 p-6">
+      <div className="relative mt-6 rounded-xl border border-cyan-500/20 shadow-2xl shadow-slate-950 bg-slate-900/60 p-6">
         <Corners />
 
         <h4 className="mb-6 orbitron text-xl tracking-wider text-cyan-400">
@@ -193,7 +120,7 @@ function Profile() {
           {highlights.map(({ title, value, icon: Icon }) => (
             <div
               key={title}
-              className="cursor-target flex flex-col items-center rounded-lg border border-cyan-500/20 bg-slate-900/60 p-5 transition-all duration-300 hover:-translate-y-1 hover:border-cyan-400 hover:shadow-lg hover:shadow-cyan-500/20"
+              className="flex flex-col items-center rounded-lg border border-cyan-500/20 bg-slate-900/60 p-5 transition-all duration-300 hover:-translate-y-1 hover:border-cyan-400 hover:shadow-lg hover:shadow-cyan-500/20"
             >
               <Icon className="text-3xl text-cyan-400 mb-3" />
 
